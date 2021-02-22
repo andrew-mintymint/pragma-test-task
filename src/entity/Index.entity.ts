@@ -1,25 +1,24 @@
-import { Model, Table, Column, BelongsTo } from 'sequelize-typescript';
-import { ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, ManyToOne, PrimaryGeneratedColumn } from 'typeorm';
 import { GroupEntity } from './Group.entity';
 
-@Table
-export class IndexEntity extends Model<IndexEntity> {
+@Entity()
+export class IndexEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column
+  @Column()
   name: string;
 
-  @Column
+  @Column()
   ethPriceInWei: number;
 
-  @Column
+  @Column()
   usdPriceInCents: number;
 
-  @Column
+  @Column()
   usdCapitalization: number;
 
-  @Column
+  @Column()
   percentageChange: number;
 
   @ManyToOne(() => GroupEntity, (group) => group.indexes)
