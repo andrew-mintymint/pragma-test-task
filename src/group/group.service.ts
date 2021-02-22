@@ -5,12 +5,12 @@ import { Repository } from 'typeorm';
 
 @Injectable()
 export class GroupService {
-  constructor(
-    @InjectRepository(GroupEntity)
-    private groupRepository: Repository<GroupEntity>,
-  ) {}
-
-  findAll(): Promise<GroupEntity[]> {
-    return this.groupRepository.find();
-  }
+  // constructor(
+  //   @InjectRepository(GroupEntity)
+  //   private groupRepository: Repository<GroupEntity>,
+  // ) {}
+  //
+  // findAll(): Promise<GroupEntity[]> {
+  //   return this.groupRepository.find();
+  // }
 }
